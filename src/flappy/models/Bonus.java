@@ -11,16 +11,18 @@ public class Bonus extends Sprite {
         largeur = 25;
         x = Principal.LARGEUR;
         y = Utils.aleatoire(25, Principal.HAUTEUR - 25);
+        vitesse = 6;
+        couleur = Color.YELLOW;
     }
 
     @Override
     public void dessiner(Graphics2D dessin) {
-        dessin.setColor(Color.YELLOW);
+        dessin.setColor(couleur);
         dessin.fillOval(x,y,largeur,largeur);
     }
 
     @Override
     public void deplacement() {
-        x -= 6;
+        x -= vitesse;
     }
 }

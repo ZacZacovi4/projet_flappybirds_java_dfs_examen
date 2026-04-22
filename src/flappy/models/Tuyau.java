@@ -9,11 +9,12 @@ public class Tuyau extends Sprite{
 
     protected int ecartement = 200;
     protected int marge = 50;
-    protected int vitesse = 4;
-    protected Color couleur = Color.GREEN;
 
     public Tuyau(){
+
         largeur = 100;
+        vitesse = 4;
+        couleur = Color.GREEN;
     }
 
     public void deplacement(){

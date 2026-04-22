@@ -7,6 +7,8 @@ public abstract class Sprite {
     protected int x;
     protected int y;
     protected int largeur;
+    protected int vitesse;
+    protected Color couleur;
 
     public abstract void dessiner(Graphics2D dessin);
     public abstract void deplacement();

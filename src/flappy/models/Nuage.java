@@ -1,17 +1,20 @@
 package flappy.models;
 
 import flappy.Principal;
+import flappy.utils.Utils;
 
 import java.awt.*;
 
 public class Nuage extends Sprite {
 
-    protected int largeur;
-    protected int vitesse = 2;
+    public Nuage(){
+        vitesse = 2;
+        couleur = Color.WHITE;
+    }
 
     @Override
     public void dessiner(Graphics2D dessin) {
-       dessin.setColor(Color.WHITE);
+       dessin.setColor(couleur);
        dessin.fillOval(x, y , largeur , largeur / 2);
     }
 

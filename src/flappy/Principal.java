@@ -1,18 +1,17 @@
 package flappy;
 
-import flappy.models.Bonus;
-import flappy.models.Nuage;
-import flappy.models.Oiseau;
-import flappy.models.Tuyau;
+import flappy.models.*;
 import flappy.utils.Utils;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
-public class Principal extends Canvas implements KeyListener {
+public class Principal extends Canvas implements KeyListener, MouseListener {
 
     public static final int LARGEUR = 800;
     public static final int HAUTEUR = 600;
@@ -22,10 +21,12 @@ public class Principal extends Canvas implements KeyListener {
     private Tuyau tuyau;
     private Nuage[] nuages = new Nuage[10];
     private ArrayList<Bonus> listeBonus = new ArrayList<>();
+    private ArrayList<Projectile> listeProjectile = new ArrayList<>();
 
     private boolean pause = false;
     private int score = 0;
     private int iteration = 0;
+    private long dernierTir = 0;
 
     public Principal() throws InterruptedException {
 
@@ -37,6 +38,7 @@ public class Principal extends Canvas implements KeyListener {
 
         //addEventListener("click", () => console.log("coucou") )
         fenetre.addKeyListener(this);
+        this.addMouseListener(this);
 
 
         JPanel panel = new JPanel();
@@ -150,6 +152,20 @@ public class Principal extends Canvas implements KeyListener {
                     pause = true;
                 }
 
+                //---- Projectile ----
+
+                ArrayList<Projectile> listeProjectileASupprimer = new ArrayList<>();
+
+                for(Projectile projectile : listeProjectile) {
+                    projectile.deplacement();
+                    projectile.dessiner(dessin);
+
+                    if(projectile.getX() > LARGEUR){
+                        listeProjectileASupprimer.add(projectile);
+                    }
+                }
+                listeProjectile.removeAll(listeProjectileASupprimer);
+
                 //---- UI ----
 
                 dessin.setColor(Color.BLACK);
@@ -181,18 +197,66 @@ public class Principal extends Canvas implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-
+        if (e.getKeyCode() == KeyEvent.VK_D) {
+            oiseau.allerEnAvant();
+        }
+        if (e.getKeyCode() == KeyEvent.VK_Q) {
+            oiseau.allerEnArriere();
+        }
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        if(e.getKeyCode() == KeyEvent.VK_SPACE) {
+        if (e.getKeyCode() == KeyEvent.VK_SPACE) {
 
-            if(pause) {
+            if (pause) {
                 reset();
             } else {
                 oiseau.saut();
             }
         }
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+
+        if (e.getButton() == MouseEvent.BUTTON1) {
+            if (e.getButton() == MouseEvent.BUTTON1) {
+
+                long maintenant = System.currentTimeMillis();
+
+                if (maintenant - dernierTir >= 500) {
+
+                    Projectile projectile = new Projectile();
+
+                    projectile.setX(oiseau.getX() + oiseau.getLargeur() / 2);
+                    projectile.setY(oiseau.getY() + oiseau.getLargeur() / 2);
+
+                    listeProjectile.add(projectile);
+
+                    dernierTir = maintenant;
+                }
+            }
+        }
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+
     }
 }
