@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62a00957-c61f-479c-bc65-79fa97460414" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/flappy/models/Projectile.java" afterDir="false" />
+    <list default="true" id="62a00957-c61f-479c-bc65-79fa97460414" name="Changes" comment="Commit du travail en cour.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/flappy/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/flappy/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flappy/models/Bonus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/flappy/models/Bonus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flappy/models/Nuage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/flappy/models/Nuage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flappy/models/Oiseau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/flappy/models/Oiseau.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flappy/models/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/flappy/models/Sprite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/flappy/models/Tuyau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/flappy/models/Tuyau.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +21,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ZacZacovi4&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ZacZacovi4/projet_flappybirds_java_dfs_examen.git&quot;,
+    &quot;accountId&quot;: &quot;87424b23-3a00-471e-bf97-b0ce34126716&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3,
   &quot;fromUser&quot;: false
@@ -38,20 +45,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Principal.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Вадим/Desktop/flappy_bird_dfs-master",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Principal.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Вадим/Desktop/flappy_bird_dfs-master&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="62a00957-c61f-479c-bc65-79fa97460414" name="Changes" comment="" />
@@ -60,11 +67,26 @@
       <option name="presentableId" value="Default" />
       <updated>1776858485543</updated>
       <workItem from="1776858486687" duration="511000" />
-      <workItem from="1776859294212" duration="9762000" />
+      <workItem from="1776859294212" duration="11242000" />
+      <workItem from="1777392287920" duration="2617000" />
+      <workItem from="1777470666184" duration="8665000" />
     </task>
+    <task id="LOCAL-00001" summary="Commit du travail en cour.">
+      <option name="closed" value="true" />
+      <created>1776869905439</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1776869905439</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit du travail en cour." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit du travail en cour." />
   </component>
 </project>

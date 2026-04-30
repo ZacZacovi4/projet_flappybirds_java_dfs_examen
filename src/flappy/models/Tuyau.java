@@ -9,6 +9,8 @@ public class Tuyau extends Sprite{
 
     protected int ecartement = 200;
     protected int marge = 50;
+    protected int vies = 3;
+    protected boolean detruit = false;
 
     public Tuyau(){
 
@@ -23,13 +25,43 @@ public class Tuyau extends Sprite{
         if(x < -largeur) {
             x = Principal.LARGEUR;
             y = Utils.aleatoire(marge + ecartement, Principal.HAUTEUR - marge);
+            vies = 3;
+            detruit = false;
         }
+
     }
 
     public void dessiner(Graphics2D dessin){
-        dessin.setColor(couleur);
+        if(!detruit) {
+            if (vies == 2) {
+                dessin.setColor(Color.ORANGE);
+            } else if (vies == 1) {
+                dessin.setColor(Color.RED);
+            } else {
+                dessin.setColor(couleur);
+            }
+        }else {
+            dessin.setColor(new Color(0,0,0,0));
+        }
         dessin.fillRect(x,y, largeur, Principal.HAUTEUR);
         dessin.fillRect(x,y-ecartement-Principal.HAUTEUR, largeur, Principal.HAUTEUR);
+    }
+
+    public void prendreDegat(){
+        if (!this.detruit){
+            if (this.vies > 0) {
+                this.vies -= 1;
+            }
+            if (this.vies <= 0){
+                this.detruit = true;
+            }
+        }
+    }
+
+    // getter du champ detruit
+
+    public boolean estDetruit(){
+        return this.detruit;
     }
 
     @Override

@@ -148,7 +148,7 @@ public class Principal extends Canvas implements KeyListener, MouseListener {
                 tuyau.deplacement();
                 tuyau.dessiner(dessin);
 
-                if (tuyau.testCollision(oiseau) || oiseau.getY() > HAUTEUR - 50) {
+                if ((!tuyau.estDetruit() && tuyau.testCollision(oiseau)) || oiseau.getY() > HAUTEUR - 50) {
                     pause = true;
                 }
 
@@ -161,6 +161,11 @@ public class Principal extends Canvas implements KeyListener, MouseListener {
                     projectile.dessiner(dessin);
 
                     if(projectile.getX() > LARGEUR){
+                        listeProjectileASupprimer.add(projectile);
+                    }
+
+                    if (!tuyau.estDetruit() && tuyau.testCollision(projectile)){
+                        tuyau.prendreDegat();
                         listeProjectileASupprimer.add(projectile);
                     }
                 }
