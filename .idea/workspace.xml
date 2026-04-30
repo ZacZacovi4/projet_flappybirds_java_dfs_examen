@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62a00957-c61f-479c-bc65-79fa97460414" name="Changes" comment="Commit du travail en cour.">
+    <list default="true" id="62a00957-c61f-479c-bc65-79fa97460414" name="Changes" comment="Rajout de la méchanique de la destruction des tuyaux avec le changement de couleur.">
+      <change afterPath="$PROJECT_DIR$/src/flappy/models/FloatingText.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/flappy/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/flappy/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flappy/models/Tuyau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/flappy/models/Tuyau.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +33,9 @@
     &quot;accountId&quot;: &quot;87424b23-3a00-471e-bf97-b0ce34126716&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3,
   &quot;fromUser&quot;: false
@@ -69,7 +72,7 @@
       <workItem from="1776858486687" duration="511000" />
       <workItem from="1776859294212" duration="11242000" />
       <workItem from="1777392287920" duration="2617000" />
-      <workItem from="1777470666184" duration="8665000" />
+      <workItem from="1777470666184" duration="14538000" />
     </task>
     <task id="LOCAL-00001" summary="Commit du travail en cour.">
       <option name="closed" value="true" />
@@ -79,7 +82,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776869905439</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Rajout de la méchanique de la destruction des tuyaux avec le changement de couleur.">
+      <option name="closed" value="true" />
+      <created>1777543642912</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1777543642912</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,6 +98,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit du travail en cour." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit du travail en cour." />
+    <MESSAGE value="Rajout de la méchanique de la destruction des tuyaux avec le changement de couleur." />
+    <option name="LAST_COMMIT_MESSAGE" value="Rajout de la méchanique de la destruction des tuyaux avec le changement de couleur." />
   </component>
 </project>

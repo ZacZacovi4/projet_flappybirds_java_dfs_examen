@@ -19,9 +19,11 @@ public class Principal extends Canvas implements KeyListener, MouseListener {
     private JFrame fenetre = new JFrame();
     private Oiseau oiseau;
     private Tuyau tuyau;
+    private FloatingText floatingText;
     private Nuage[] nuages = new Nuage[10];
     private ArrayList<Bonus> listeBonus = new ArrayList<>();
     private ArrayList<Projectile> listeProjectile = new ArrayList<>();
+    private ArrayList<FloatingText> listeFloatingText = new ArrayList<>();
 
     private boolean pause = false;
     private int score = 0;
@@ -85,6 +87,8 @@ public class Principal extends Canvas implements KeyListener, MouseListener {
             nuage.setY(Utils.aleatoire(0, HAUTEUR - 200));
             nuage.setLargeur(Utils.aleatoire(30,200));
         }
+// nettoyage de floatingText des bonus
+        listeFloatingText.clear();
     }
 
     public void demarrer() throws InterruptedException {
@@ -130,6 +134,12 @@ public class Principal extends Canvas implements KeyListener, MouseListener {
                     if(oiseau.testCollision(bonus)) {
                         score+=100;
                         bonusTouche.add(bonus);
+
+                        floatingText = new FloatingText();
+                        floatingText.setX(oiseau.getX() + oiseau.getLargeur() / 2);
+                        floatingText.setY(oiseau.getY() - 10);
+                        listeFloatingText.add(floatingText);
+
                     }
                 }
 
@@ -137,6 +147,20 @@ public class Principal extends Canvas implements KeyListener, MouseListener {
                 for(Bonus bonus : bonusTouche) {
                     listeBonus.remove(bonus);
                 }
+
+                // ---- Floating Text ----
+
+                ArrayList<FloatingText> floatingTextExpire = new ArrayList<>();
+
+                for(FloatingText floatingText : listeFloatingText){
+                    floatingText.deplacement();
+                    floatingText.dessiner(dessin);
+
+                    if(floatingText.estExpire()){
+                        floatingTextExpire.add(floatingText);
+                    }
+                }
+                listeFloatingText.removeAll(floatingTextExpire);
 
                 //---- oiseau ----
 
